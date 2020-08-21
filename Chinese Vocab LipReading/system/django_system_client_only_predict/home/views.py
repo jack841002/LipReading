@@ -95,7 +95,7 @@ def LiptoNumpy(theTime):
 
 def transferFile(theTime, content):
     scp = paramiko.Transport(("140.116.39.114", 22))
-    scp.connect(username="eagleuser", password="nckulina41504eagleepson")
+    scp.connect(username="", password="")
     sftp = paramiko.SFTPClient.from_transport(scp)
 
     remote_path = "/home/eagleuser/Users/dragon/Chinese_vocab_LipReading/system_data/transfer_data/" + str(theTime)
@@ -190,7 +190,7 @@ def PredictResult(file_path):
         np.save('./PredictData/' + str(theTime) + "/" + str(num), np.array(image_list))
 
         scp = paramiko.Transport(("140.116.39.114", 22))
-        scp.connect(username="eagleuser", password="nckulina41504eagleepson")
+        scp.connect(username="", password="")
         sftp = paramiko.SFTPClient.from_transport(scp)
 
         remote_path = "/home/eagleuser/Users/dragon/Chinese_vocab_LipReading/test/predict_data/" + str(theTime)
